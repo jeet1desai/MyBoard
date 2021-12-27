@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>OpenBoard-Clone</title>
+  </head>
+  <body>
+    <div class="option-container">
+      <!-- <i class="fas fa-bars"></i> -->
+      <i class="fas fa-times"></i>
+    </div>
+
+    <div class="tool-container">
+      <img alt="pencil" src="./images/pencil.png" class="pencil" />
+      <img alt="eraser" src="./images/eraser.png" class="eraser" />
+      <img alt="download" src="./images/download.png" class="download" />
+      <img alt="upload" src="./images/upload.png" class="upload" />
+      <img alt="note" src="./images/post-it.png" class="sticky" />
+      <img alt="undo" src="./images/undo.png" class="undo" />
+      <img alt="redo" src="./images/redo.png" class="redo" />
+    </div>
+
+    <div class="pencil-tool">
+      <div class="pencil-range">
+        <input type="range" min="0" max="10" value="2" />
+      </div>
+      <hr />
+      <div class="pencil-color-container">
+        <div class="black pencil-color"></div>
+        <div class="red pencil-color"></div>
+        <div class="blue pencil-color"></div>
+      </div>
+    </div>
+
+    <div class="eraser-tool">
+      <div class="eraser-range">
+        <input type="range" min="0" max="10" value="2" />
+      </div>
+    </div>
+
+    <!-- <div class="sticky-container">
+      <div class="sticky-header">
+        <div class="minimize">
+          <i class="fas fa-minus"></i>
+        </div>
+        <div class="remove">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="note-container">
+        <textarea></textarea>
+      </div>
+    </div> -->
+
+    <canvas></canvas>
+
+    <script src="./tool.js"></script>
+    <script src="./canvas.js"></script>
+  </body>
+</html>

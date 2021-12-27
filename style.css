@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.option-container {
+  height: 45px;
+  width: 45px;
+  background-color: #2a9d8f;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.tool-container {
+  display: inline-block;
+  /*display: none;
+  */
+  background-color: #f1faee;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  position: absolute;
+  top: 30px;
+  left: 100px;
+}
+
+.tool-container img {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+}
+
+.tool-container img:hover {
+  background-color: #e5e5e5;
+  border-radius: 5px;
+}
+
+.pencil-tool {
+  /* display: inline-block; */
+  display: none;
+  background-color: #e5e5e5;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  position: absolute;
+  top: 82px;
+  left: 100px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.pencil-tool:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 100%;
+  left: 10px;
+  border: 10px solid transparent;
+  border-top: none;
+  border-bottom-color: #e5e5e5;
+  filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
+}
+
+.pencil-tool hr {
+  padding: 0;
+  margin: 0;
+}
+
+.pencil-tool .pencil-range,
+.eraser-tool .eraser-range {
+  padding: 6px 0;
+}
+
+.pencil-tool .pencil-color-container {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pencil-tool .pencil-color-container .pencil-color {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+
+.pencil-tool .pencil-color-container .pencil-color.black {
+  background-color: black;
+}
+
+.pencil-tool .pencil-color-container .pencil-color.red {
+  background-color: red;
+}
+
+.pencil-tool .pencil-color-container .pencil-color.blue {
+  background-color: blue;
+}
+
+.eraser-tool {
+  /* display: inline-block; */
+  display: none;
+  background-color: #e5e5e5;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  position: absolute;
+  top: 82px;
+  left: 145px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.eraser-tool:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 100%;
+  left: 10px;
+  border: 10px solid transparent;
+  border-top: none;
+  border-bottom-color: #e5e5e5;
+  filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
+}
+
+.sticky-container {
+  width: 200px;
+  /* height: 180px; */
+  background-color: #e8e8e4;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  position: absolute;
+  top: 300px;
+  left: 150px;
+}
+
+.sticky-container .sticky-header {
+  height: 30px;
+  background-color: #e8e8e4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.sticky-container .sticky-header > * {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  color: white;
+}
+
+.sticky-container .sticky-header .minimize {
+  margin-right: 6px;
+  background-color: #38b000;
+}
+
+.sticky-container .sticky-header .remove {
+  background-color: #ef233c;
+}
+
+.sticky-container .note-container {
+  height: 150px;
+  background-color: white;
+}
+
+.sticky-container .note-container textarea{
+  width: 100%;
+  height: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+}
+
+.sticky-container .note-container img{
+  width: 100%;
+  height: 100%;
+}
